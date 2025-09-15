@@ -20,3 +20,7 @@ df = pd.read_csv(DATA_URL, header=None, names=cols)
 # 1. Mostrar o número de linhas e colunas
 print(f"Número de linhas e colunas: {df.shape}")
 
+# Questão 1 item 2
+# Mostrar as 5 primeiras linhas
+print("\nAs 5 primeiras linhas do DataFrame:")
+print(df.head())
