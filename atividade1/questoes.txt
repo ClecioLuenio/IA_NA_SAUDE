@@ -1,0 +1,24 @@
+1. Escreva um programa em Python que leia um número inteiro digitado pelo usuário e
+verifique se ele é par ou ímpar.
+Para ler um número digitado pelo usuário, utilize.
+numero = int(input(&quot;Digite um número inteiro: &quot;))
+2. Escreva um programa em Python que solicite ao usuário o peso (em kg) e a altura
+(em metros). O programa deve calcular o índice de massa corporal (IMC) e informar
+em qual classificação a pessoa se encontra, de acordo com as faixas:
+Abaixo de 18,5  “abaixo do peso”
+De 18,5 até 24,9  “peso normal”
+De 25 até 29,9  “sobrepeso”
+Acima de 30  “obesidade”
+3. Solicite três notas de um aluno, calcule a média e mostre se ele foi aprovado (média
+≥ 6,0).
+4. Jogo de adivinhação. Escreva um programa em Python que sorteie um número
+aleatório entre 1 e 10. O usuário deve tentar adivinhar o número, recebendo dicas a
+cada tentativa:
+ Se o palpite for menor que o número, imprimir “Tente um número maior”.
+ Se o palpite for maior que o número, imprimir “Tente um número menor”.
+O jogo termina quando o usuário acerta o número, e o programa deve informar em
+quantas tentativas o acerto ocorreu.
+Para geração de números aleatórios, você deve usar uma biblioteca random. Segue o
+bloco de código
+import random
+numero = random.randint(1, 10)
