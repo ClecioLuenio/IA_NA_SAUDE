@@ -1,0 +1,29 @@
+Aplicar um modelo de Regressão Logística para prever se uma amostra de exame de mama é Maligna (M) ou Benigna (B), utilizando atributos extraídos de imagens celulares. Além disso, interpretar os coeficientes do modelo e representá-los graficamente para compreender a importância relativa de cada variável.
+Nome: Breast Cancer Wisconsin (Diagnostic)
+Fonte: UCI Machine Learning Repository
+URL: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+Descrição: Contém 569 amostras de exames de mama com 30 atributos numéricos extraídos de imagens de células epiteliais, além da variável de diagnóstico:
+M = maligno
+B = benigno
+Tarefas:
+Preparação dos dados:
+Carregue o dataset diretamente da URL.
+Converta a variável diagnosis em formato binário (M = 1, B = 0).
+Separe o dataset em variáveis X (atributos) e y (diagnóstico).
+Divida em treino (70%) e teste (30%).
+
+Treinamento do modelo:
+Treine um modelo de Regressão Logística utilizando os dados de treino.
+Exiba o score de acurácia no conjunto de teste.
+Mostre a matriz de confusão e calcule métricas: acurácia, precisão, recall e F1-score.
+
+Interpretação dos coeficientes:
+Extraia os coeficientes (betas) do modelo e associe-os às variáveis correspondentes.
+Monte uma tabela ordenada com os coeficientes e seus valores absolutos, destacando as variáveis mais importantes.
+Plote um gráfico de barras horizontais com os coeficientes para visualizar o peso de cada atributo na classificação.
+
+Visualizações adicionais:
+Crie uma curva ROC com a AUC do modelo.
+Plote a curva de precisão vs recall.
+Selecione 2 variáveis (por exemplo, radius_mean e area_mean) e plote a fronteira de decisão da regressão logística em um scatterplot.
+
