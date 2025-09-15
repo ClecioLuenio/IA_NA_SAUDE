@@ -1,0 +1,47 @@
+Técnicas de visualização em estatística descritiva
+
+Praticar operações básicas da biblioteca pandas em Python, utilizando um conjunto de
+dados real e referenciado no UCI Machine Learning Repository, além de aplicar
+estratégias de visualização gráfica para compreender distribuições e relações entre
+variáveis.
+ Nome: Breast Cancer Wisconsin (Diagnostic)
+ Fonte: UCI Machine Learning Repository
+ URL: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic
+ Descrição: Contém 569 amostras de exames de mama com 30 atributos
+numéricos extraídos de imagens de células epiteliais, além da variável de
+diagnóstico:
+o M = maligno
+o B = benigno
+
+Tarefas:
+1. Carregamento e inspeção inicial:
+a) Carregue o dataset diretamente da URL.
+b) Atribua nomes de colunas (ID, diagnóstico e os 30 atributos).
+c) Mostre o número de linhas, colunas e as 5 primeiras linhas.
+# URL direta do arquivo de dados no UCI:
+DATA_URL = &quot;https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-
+wisconsin/wdbc.data&quot;
+# Nomes de colunas (32 no total: id, diagnosis + 30 atributos)
+feature_groups = [&quot;mean&quot;, &quot;se&quot;, &quot;worst&quot;]
+base_features = [
+&quot;radius&quot;, &quot;texture&quot;, &quot;perimeter&quot;, &quot;area&quot;, &quot;smoothness&quot;,
+&quot;compactness&quot;, &quot;concavity&quot;, &quot;concave_points&quot;, &quot;symmetry&quot;,
+&quot;fractal_dimension&quot;
+]
+feature_cols = [f&quot;{b}_{g}&quot; for g in feature_groups for b in base_features]
+cols = [&quot;id&quot;, &quot;diagnosis&quot;] + feature_cols # total 32
+
+Universidade Federal Fluminense.
+Introdução ao Aprendizado de Máquina para Saúde
+Prof. Flávio Luiz Seixas. 13/09/2025
+Técnicas de visualização em estatística descritiva Página 1 de 1
+# Carrega CSV sem header e atribui nomes
+df = pd.read_csv(DATA_URL, header=None, names=cols)
+2. Visualizações gráficas:
+a) Crie um histograma de radius_mean separado por diagnóstico (cores
+diferentes para B e M).
+b) Plote um boxplot de area_mean comparando Benignos vs Malignos.
+c) Gere um scatterplot entre radius_mean e area_mean, colorindo os
+pontos de acordo com o diagnóstico.
+d) Construa um heatmap de correlação entre as variáveis radius_mean,
+texture_mean, perimeter_mean e area_mean.
