@@ -15,3 +15,8 @@ cols = ["id", "diagnosis"] + feature_cols  # total 32
 
 # Carrega CSV sem header e atribui nomes
 df = pd.read_csv(DATA_URL, header=None, names=cols)
+
+# Questão 1 item 1
+# 1. Mostrar o número de linhas e colunas
+print(f"Número de linhas e colunas: {df.shape}")
+
