@@ -56,4 +56,4 @@ def questao4():
 
 # questao3() # média
 
-questao4()
+# questao4() # número aleatório
